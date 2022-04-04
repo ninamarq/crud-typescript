@@ -13,4 +13,12 @@ export default class GamesModel {
       .execute('SELECT * FROM crud_typescript.games;');
     return games as IGames[];
   }
+
+  public async getById(id: number): Promise<IGames> {
+    const [result] = await this.connection
+      .execute(`SELECT * FROM crud_typescript.games
+      WHERE id = ?;`, [id]);
+      const [game] = result as IGames[];
+      return game;
+  }
 }

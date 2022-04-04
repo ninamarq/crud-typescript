@@ -14,6 +14,17 @@ class GamesController {
       next(error);
     }
   };
+
+  public getById = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const id = Number(req.params.id);
+      const game = await this.gameService.getById(id);
+      return res.status(StatusCodes.OK).json(game);
+    } catch (error) {
+      console.log(error);
+      next(error);
+    }
+  };
 }
 
 export default GamesController;
