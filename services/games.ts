@@ -18,6 +18,11 @@ class GamesService {
     const game = await this.model.getById(id);
     return game;
   }
+
+  public async postGame(game: IGames): Promise<IGames> {
+    const gameCreated = await this.model.postGame(game);
+    return gameCreated;
+  }
 }
 
 export default GamesService;
