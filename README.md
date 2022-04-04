@@ -22,7 +22,7 @@ CRUD básico com tema Jogos 🎮
 
 * SQL
 
-### ⚙️ Antes de começar a testar
+## ⚙️ Antes de começar a testar
 
 1. Clone o repositório
 
@@ -34,7 +34,7 @@ CRUD básico com tema Jogos 🎮
 
 `npm install`
 
-## Atenção para o formato do .env, senão dará erro.
+### Atenção para o formato do .env, senão dará erro.
 3. Primeiro crie um arquivo .env, e coloque as informações OBRIGATORIAMENTE com estas chaves, do seu servidor de MySQL.
 
 ```
