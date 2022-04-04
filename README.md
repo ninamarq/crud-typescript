@@ -1,4 +1,4 @@
-# crud-typescript (Em andamento)
+# crud-typescript
 
 Olá!
 
