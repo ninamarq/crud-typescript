@@ -27,6 +27,10 @@ class GamesService {
   public async updateGame(id: number, game: IGames): Promise<void> {
     await this.model.updateGame(id, game);
   }
+
+  public async deleteGame(id: number): Promise<void> {
+    await this.model.deleteGame(id);
+  }
 }
 
 export default GamesService;
