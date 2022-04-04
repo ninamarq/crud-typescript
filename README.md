@@ -22,7 +22,7 @@ CRUD básico com tema Jogos 🎮
 
 * SQL
 
-## ⚙️ Antes de começar a testar
+### ⚙️ Antes de começar a testar
 
 1. Clone o repositório
 
