@@ -23,6 +23,10 @@ class GamesService {
     const gameCreated = await this.model.postGame(game);
     return gameCreated;
   }
+
+  public async updateGame(id: number, game: IGames) {
+    await this.model.updateGame(id, game);
+  }
 }
 
 export default GamesService;
