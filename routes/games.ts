@@ -1,8 +1,10 @@
 import { Router } from 'express';
-import { StatusCodes } from 'http-status-codes';
+import GamesController from '../controllers/games';
 
 const GameRouter = Router();
 
-GameRouter.get('/', (req, res) => res.status(StatusCodes.OK).json('opa bao?'));
+const controllers = new GamesController();
+
+GameRouter.get('/', controllers.getAll);
 
 export default GameRouter;

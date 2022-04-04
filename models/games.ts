@@ -10,7 +10,7 @@ export default class GamesModel {
 
   public async getAll(): Promise<IGames[]> {
     const [games] = await this.connection
-      .execute('SELECT * FROM games');
+      .execute('SELECT * FROM crud_typescript.games;');
     return games as IGames[];
   }
 }
