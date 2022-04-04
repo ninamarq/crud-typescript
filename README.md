@@ -39,6 +39,6 @@ CRUD básico com tema Jogos 🎮
 - Para rodar o servidor
 `npm run dev`
 
-# Acesse http://localhost:3000 no seu navagador
+# Acesse http://localhost:3000 no seu navegador
 
 Espero que gostem! 💙
