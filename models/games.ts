@@ -39,4 +39,11 @@ export default class GamesModel {
       SET title=?, gender=?, creator=?
       WHERE id=?`, [title, gender, creator, id]);
   }
+
+  public async deleteGame(id: number) {
+    await this.connection
+      .execute<ResultSetHeader>(`
+      DELETE FROM crud_typescript.games
+      WHERE id=?`, [id]);
+  }
 }
