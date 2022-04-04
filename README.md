@@ -28,7 +28,7 @@ Projeto feito para treinar typescript e brincar um pouco com node enquanto isso!
 
 - `npm start`
 
-- Caso tenha (Insomnia, Postman, ...)
+- Para rodar o servidor
 - `npm run dev`
 
 Espero que gostem!
