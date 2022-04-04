@@ -2,15 +2,29 @@
 
 Olá!
 
+<!-- Sobre o Projeto -->
+## Sobre o Projeto
 Projeto feito para treinar typescript e brincar um pouco com node enquanto isso! 😄
+CRUD básico com tema Jogos 🎮
 
-## Tecnologias utilizadas
+## 🖼️ Imagens do Projeto
+<div align="center">
+  <img src="./Assets/tela1.png">
+</div>
+<div align="center">
+  <img src="./Assets/tela2.png">
+</div>
+<div align="center">
+  <img src="./Assets/tela3.png">
+</div>
 
-- Typescript
+## 🧰 Tecnologias e Bibliotecas
 
-- Node.js
+* Typescript
 
-- Insomnia (Ferramenta de API REST)
+* Node.js
+
+* Insomnia (Ferramenta de API REST)
 
 ## Antes de começar a testar
 
@@ -22,13 +36,15 @@ Projeto feito para treinar typescript e brincar um pouco com node enquanto isso!
 
 2. Instale as dependências
 
-- `npm install`
+`npm install`
 
 3. Caso não possua nenhuma ferramenta cliente de API REST
 
-- `npm start`
+`npm start`
 
 - Para rodar o servidor
-- `npm run dev`
+`npm run dev`
 
-Espero que gostem!
+# Acesse http://localhost:3000 no seu navagador
+
+Espero que gostem! 💙
