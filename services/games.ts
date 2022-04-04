@@ -24,7 +24,7 @@ class GamesService {
     return gameCreated;
   }
 
-  public async updateGame(id: number, game: IGames) {
+  public async updateGame(id: number, game: IGames): Promise<void> {
     await this.model.updateGame(id, game);
   }
 }

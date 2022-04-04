@@ -19,4 +19,6 @@ GameRouter.get('/:id', controllers.getById);
 
 GameRouter.post('/', validateBody, controllers.postGame);
 
+GameRouter.put('/:id', validateBody, controllers.updateGame);
+
 export default GameRouter;

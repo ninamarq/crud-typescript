@@ -35,7 +35,8 @@ export default class GamesModel {
     const { title, gender, creator } = game;
     await this.connection
       .execute<ResultSetHeader>(`
-      UPDATE crud_typescript.games title = ?, gender = ?, creator = ?
-      WHERE id = ?`, [title, gender, creator, id]);
+      UPDATE crud_typescript.games
+      SET title=?, gender=?, creator=?
+      WHERE id=?`, [title, gender, creator, id]);
   }
 }
