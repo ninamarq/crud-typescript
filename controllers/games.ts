@@ -48,6 +48,17 @@ class GamesController {
       next(error);
     }
   };
+
+  public deleteGame = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const { id } = req.params;
+      await this.gameService.deleteGame(Number(id));
+      res.status(StatusCodes.NO_CONTENT).end();
+    } catch (error) {
+      console.log(error);
+      next(error);
+    }
+  };
 }
 
 export default GamesController;
