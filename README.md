@@ -4,6 +4,14 @@ Olá!
 
 Projeto feito para treinar typescript e brincar um pouco com node enquanto isso! 😄
 
+## Tecnologias utilizadas
+
+- Typescript
+
+- Node.js
+
+- Insomnia (Ferramenta de API REST)
+
 ## Antes de começar a testar
 
 1. Clone o repositório
