@@ -9,13 +9,7 @@ CRUD básico com tema Jogos 🎮
 
 ## 🖼️ Imagens do Projeto
 <div align="center">
-  <img src="./Assets/tela1.png">
-</div>
-<div align="center">
-  <img src="./Assets/tela2.png">
-</div>
-<div align="center">
-  <img src="./Assets/tela3.png">
+  <img src="./assets/telaInsomnia.png">
 </div>
 
 ## 🧰 Tecnologias e Bibliotecas
