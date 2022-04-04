@@ -19,6 +19,11 @@ class GamesController {
     try {
       const id = Number(req.params.id);
       const game = await this.gameService.getById(id);
+      if (!game) {
+        return res.status(StatusCodes.NOT_FOUND).json({
+          message: "Produto não encontrado, cheque se o ID está correto."
+        });
+      }
       return res.status(StatusCodes.OK).json(game);
     } catch (error) {
       console.log(error);
@@ -41,6 +46,14 @@ class GamesController {
     try {
       const { id } = req.params;
       const { title, gender, creator } = req.body;
+
+      const game = await this.gameService.getById(Number(id));
+      if (!game) {
+        return res.status(StatusCodes.NOT_FOUND).json({
+          message: "Produto não encontrado, cheque se o ID está correto."
+        });
+      }
+
       await this.gameService.updateGame(Number(id), { title, gender, creator });
       res.status(StatusCodes.NO_CONTENT).end();
     } catch (error) {
@@ -52,6 +65,14 @@ class GamesController {
   public deleteGame = async (req: Request, res: Response, next: NextFunction) => {
     try {
       const { id } = req.params;
+
+      const game = await this.gameService.getById(Number(id));
+      if (!game) {
+        return res.status(StatusCodes.NOT_FOUND).json({
+          message: "Produto não encontrado, cheque se o ID está correto."
+        });
+      }
+      
       await this.gameService.deleteGame(Number(id));
       res.status(StatusCodes.NO_CONTENT).end();
     } catch (error) {
