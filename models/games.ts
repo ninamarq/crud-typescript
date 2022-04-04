@@ -1,4 +1,4 @@
-import { Pool } from 'mysql2/promise';
+import { Pool, ResultSetHeader } from 'mysql2/promise';
 import IGames from '../interfaces/games';
 
 export default class GamesModel {
@@ -20,5 +20,14 @@ export default class GamesModel {
       WHERE id = ?;`, [id]);
       const [game] = result as IGames[];
       return game;
+  }
+
+  public async postGame(game: IGames): Promise<IGames> {
+    const { title, gender, creator } = game;
+    const [result] = await this.connection
+      .execute<ResultSetHeader>(`INSERT INTO crud_typescript.games (title, gender, creator)
+      VALUES (?, ?, ?)`, [title, gender, creator]);
+    const { insertId } = result;
+    return { id: insertId, ...game };
   }
 }

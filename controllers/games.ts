@@ -25,6 +25,17 @@ class GamesController {
       next(error);
     }
   };
+
+  public postGame = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const { title, gender, creator } = req.body;
+      const game = await this.gameService.postGame({ title, gender, creator });
+      return res.status(StatusCodes.OK).json(game);
+    } catch (error) {
+      console.log(error);
+      next(error);
+    }
+  };
 }
 
 export default GamesController;
