@@ -30,4 +30,12 @@ export default class GamesModel {
     const { insertId } = result;
     return { id: insertId, ...game };
   }
+
+  public async updateGame(id: number, game: IGames) {
+    const { title, gender, creator } = game;
+    await this.connection
+      .execute<ResultSetHeader>(`
+      UPDATE crud_typescript.games title = ?, gender = ?, creator = ?
+      WHERE id = ?`, [title, gender, creator, id]);
+  }
 }
