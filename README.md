@@ -10,7 +10,7 @@ Projeto feito para treinar typescript e brincar um pouco com node enquanto isso!
 
 - `git clone https://github.com/ninamarq/crud-typescript/`.
 - Entre na pasta do repositório que você acabou de clonar:
-  - `cd scrud-typescript`
+  - `cd crud-typescript`
 
 2. Instale as dependências
 
