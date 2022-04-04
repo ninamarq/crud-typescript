@@ -7,7 +7,7 @@ const GameRouter = Router();
 
 const controllers = new GamesController();
 
-const validatePost = [
+const validateBody = [
   validateTitle,
   validateCreator,
   validateGender
@@ -17,6 +17,8 @@ GameRouter.get('/', controllers.getAll);
 
 GameRouter.get('/:id', controllers.getById);
 
-GameRouter.post('/', validatePost, controllers.postGame);
+GameRouter.post('/', validateBody, controllers.postGame);
+
+GameRouter.put('/:id', validateBody, controllers.updateGame);
 
 export default GameRouter;

@@ -36,6 +36,18 @@ class GamesController {
       next(error);
     }
   };
+
+  public updateGame = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const { id } = req.params;
+      const { title, gender, creator } = req.body;
+      await this.gameService.updateGame(Number(id), { title, gender, creator });
+      res.status(StatusCodes.NO_CONTENT).end();
+    } catch (error) {
+      console.log(error);
+      next(error);
+    }
+  };
 }
 
 export default GamesController;
