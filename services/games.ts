@@ -13,6 +13,11 @@ class GamesService {
     const games = await this.model.getAll();
     return games;
   }
+
+  public async getById(id: number): Promise<IGames> {
+    const game = await this.model.getById(id);
+    return game;
+  }
 }
 
 export default GamesService;
